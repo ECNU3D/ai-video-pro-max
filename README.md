@@ -4,7 +4,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-repo/ai-video-pro-max.git
+git clone https://github.com/ECNU3D/ai-video-pro-max
 cd ai-video-pro-max
 
 # 运行同步脚本，将 skills 链接到各 AI 工具的配置目录
