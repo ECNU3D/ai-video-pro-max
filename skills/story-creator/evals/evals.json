@@ -1,0 +1,104 @@
+{
+  "skill_name": "story-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我想做一个短视频系列，讲的是一个外卖小哥在送餐的时候无意间发现了一个平行世界的入口，每次送到特定的地址就会进入不同的奇幻世界。大概3集，每集一分钟左右，科幻类的，要有点搞笑的感觉。帮我从头开始规划一下。",
+      "expected_output": "完整的交互流程：确认参数 → 生成大纲（含标题、简介、角色、剧集） → 角色设计 → 剧集大纲。所有内容为中文，角色visual_description为英文。",
+      "files": [],
+      "assertions": [
+        {
+          "name": "all_content_in_chinese",
+          "description": "除visual_description外，所有生成的故事内容（标题、简介、角色描述、剧情等）均为中文",
+          "type": "manual"
+        },
+        {
+          "name": "interactive_flow",
+          "description": "每个阶段结束后都有向用户询问确认/修改的交互环节",
+          "type": "manual"
+        },
+        {
+          "name": "complete_outline",
+          "description": "生成了包含标题、简介、主题、角色列表和剧集概要的完整故事大纲",
+          "type": "manual"
+        },
+        {
+          "name": "character_design",
+          "description": "每个角色包含姓名、年龄、外貌、性格、背景、关系和英文visual_description",
+          "type": "manual"
+        },
+        {
+          "name": "episode_outlines",
+          "description": "3集的详细剧集大纲，每集100-200字，含关键事件列表",
+          "type": "manual"
+        },
+        {
+          "name": "consistency_check",
+          "description": "剧集大纲完成后进行了一致性检查（剧情逻辑、角色行为、时间线）",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "帮我想一个适合做短视频的故事吧，我没什么特别的想法，但我喜欢温馨治愈的风格，最好有动物元素。2集就行，每集30秒，角色2个就够了。",
+      "expected_output": "先生成一个随机创意，确认后走完整流程。创意应包含动物元素和温馨治愈风格。生成大纲、角色、剧集大纲。",
+      "files": [],
+      "assertions": [
+        {
+          "name": "random_idea_generated",
+          "description": "先为用户生成了一个符合'温馨治愈+动物元素'偏好的随机故事创意",
+          "type": "manual"
+        },
+        {
+          "name": "respects_parameters",
+          "description": "按照用户要求生成了2集、每集30秒、2个角色的内容",
+          "type": "manual"
+        },
+        {
+          "name": "warm_healing_tone",
+          "description": "整体故事基调符合温馨治愈的风格要求",
+          "type": "manual"
+        },
+        {
+          "name": "interactive_confirmation",
+          "description": "在生成创意后询问用户是否满意，在每个阶段都有交互确认",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "我要做一个悬疑短视频，讲一个密室逃脱的故事。5个角色被困在一个废弃的医院里，他们必须在1小时内找到出口，但其中一个人其实是设局者。做5集，每集2分钟。帮我做完整的故事规划。",
+      "expected_output": "按照用户详细的参数设定生成完整内容。5角色、5集、每集120秒。角色中有一个隐藏的设局者。悬疑氛围浓厚。",
+      "files": [],
+      "assertions": [
+        {
+          "name": "five_characters",
+          "description": "生成了正好5个角色，且其中一个暗藏设局者身份",
+          "type": "manual"
+        },
+        {
+          "name": "five_episodes",
+          "description": "生成了5集的剧集大纲",
+          "type": "manual"
+        },
+        {
+          "name": "suspense_atmosphere",
+          "description": "故事大纲和角色设计体现悬疑氛围",
+          "type": "manual"
+        },
+        {
+          "name": "hidden_mastermind",
+          "description": "设局者角色在早期阶段看起来像普通角色，设定中有隐藏线索",
+          "type": "manual"
+        },
+        {
+          "name": "episode_progression",
+          "description": "5集大纲有清晰的悬疑递进结构（谜题→线索→反转→揭晓）",
+          "type": "manual"
+        }
+      ]
+    }
+  ]
+}
