@@ -7,7 +7,7 @@ src="$root/skills"
 targets=(
   "$root/.claude/skills"
   "$root/.trae/skills"
-  "$root/.agent/skills"
+  "$root/.agents/skills"
 )
 
 if [ ! -d "$src" ]; then
